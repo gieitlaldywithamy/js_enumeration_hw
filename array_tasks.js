@@ -18,7 +18,7 @@ const arrayTasks = {
 	 sum: function (arr) {
       return arr.reduce(function(runningTotal, value){
         return runningTotal + value;
-      })
+      });
 	 },
 
 	 removeAndClone: function (arr, valueToRemove) {
@@ -32,12 +32,15 @@ const arrayTasks = {
     let indices = [];
     arr.map(function(item, currentIndex){
       if (item === itemToFind) indices.push(currentIndex);
-    })
+    });
     return indices;
 	 },
 
 	 sumOfAllEvenNumbersSquared: function (arr) {
+     return arr.reduce(function(runningTotal, value){
+       return value % 2 === 0 ? runningTotal+Math.pow(value,2): runningTotal;
 
+     }, 0);
 	 }
 
 	// ----------- EXTENSION ------------
