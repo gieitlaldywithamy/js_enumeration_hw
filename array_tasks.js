@@ -47,9 +47,10 @@ const arrayTasks = {
 
 	 findDuplicates: function (arr) {
      return arr.filter(function(value, i){
-       const duplicate = arr.slice(i+1).includes(value);
-       const unique = arr.indexOf(value) === i;
-       return duplicate && unique;
+       const duplicate = arrayTasks.findIndexesOf(arr, value).length > 1;
+       //once the duplicate has been added it cant be added again
+       const isFirstInstance = arr.indexOf(value) === i;
+       return duplicate && isFirstInstance;
 
      })
 	 },
