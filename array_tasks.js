@@ -1,12 +1,12 @@
 const arrayTasks = {
 
 	 concat: function (arr1, arr2) {
-    return arr1.concat(arr2);
-	 }
+     return arr1.concat(arr2);
+	 },
 
-	// insertAt: function (arr, itemToAdd, index) {
-
-	// },
+	 insertAt: function (arr, itemToAdd, index) {
+    return arr.splice(index, 0, itemToAdd);
+	 },
 
 	// square: function (arr) {
 
