@@ -41,13 +41,18 @@ const arrayTasks = {
        return value % 2 === 0 ? runningTotal+Math.pow(value,2): runningTotal;
 
      }, 0);
-	 }
+	 },
 
 	// ----------- EXTENSION ------------
 
-	// findDuplicates: function (arr) {
+	 findDuplicates: function (arr) {
+     return arr.filter(function(value, i){
+       const duplicate = arr.slice(i+1).includes(value);
+       const unique = arr.indexOf(value) === i;
+       return duplicate && unique;
 
-	// },
+     })
+	 },
 
 }
 
