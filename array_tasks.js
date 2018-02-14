@@ -5,28 +5,40 @@ const arrayTasks = {
 	 },
 
 	 insertAt: function (arr, itemToAdd, index) {
-    return arr.splice(index, 0, itemToAdd);
+     arr.splice(index, 0, itemToAdd);
+    return arr;
 	 },
 
-	// square: function (arr) {
+	 square: function (arr) {
+     return arr.map(function(element){
+       return element*element;
+     });
+	 },
 
-	// },
+	 sum: function (arr) {
+      return arr.reduce(function(runningTotal, value){
+        return runningTotal + value;
+      })
+	 },
 
-	// sum: function (arr) {
+	 removeAndClone: function (arr, valueToRemove) {
+     const arrClone = arr.filter(function(value){
+       return value !== valueToRemove;
+     });
+     return arrClone;
+	 },
 
-	// },
+	 findIndexesOf: function (arr, itemToFind) {
+    let indices = [];
+    arr.map(function(item, currentIndex){
+      if (item === itemToFind) indices.push(currentIndex);
+    })
+    return indices;
+	 },
 
-	// removeAndClone: function (arr, valueToRemove) {
+	 sumOfAllEvenNumbersSquared: function (arr) {
 
-	// },
-
-	// findIndexesOf: function (arr, itemToFind) {
-
-	// },
-
-	// sumOfAllEvenNumbersSquared: function (arr) {
-
-	// }
+	 }
 
 	// ----------- EXTENSION ------------
 
